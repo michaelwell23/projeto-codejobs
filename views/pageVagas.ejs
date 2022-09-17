@@ -1,0 +1,27 @@
+<%- include('./partials/header.ejs')%>
+    <section id="job" class="job">
+      <div class="container">
+        <div class="section-title">
+          <h2>Open Roles</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="why-us">
+      <div class="container">
+        <div class="row no-gutters">
+          <% categorias.forEach(categoria => { %>
+            <% categoria.vagas.forEach(vaga => { %>
+              <div class="col-lg-4 col-md-6 content-item">
+                <span><%- categoria.categoria %></span>
+                <h4><%- vaga.titulo %></h4>
+                <a href="vaga/<%- vaga.id %>">To View</a>
+              </div>
+          <% }) %>
+          <% }) %>
+        </div>
+      </div>
+    </section><!-- End Why Us Section -->
+  <%-include('./sections/clients')%> 
+<%- include('./partials/footer.ejs')%>

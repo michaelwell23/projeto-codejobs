@@ -1,0 +1,16 @@
+<%-include('./partials/header.ejs') %> 
+
+<section id="job" class="job">
+  <div class="container">
+    <div class="section-title">
+      <h2><%- vaga.titulo %></h2>
+      <p><%- vaga.descricao %></p>
+      <a class="btn-get-started animate__animated animate__fadeInUp scrollto">
+        Apply to Job</a>
+    </div>
+  </div>
+</section>
+
+<%- include('./sections/actions.ejs') %> 
+<%-include('./sections/clients.ejs')%>
+<%- include('./partials/footer.ejs') %>

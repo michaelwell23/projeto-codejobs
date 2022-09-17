@@ -1,0 +1,31 @@
+<%- include('../header.ejs') %> 
+
+<main id="main">
+  <section class="breadcrumbs">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <h2>Admin Area</h2>
+        <ol>
+          <li><a href="/admin/">Admin Area</a></li>
+          <li>Gerenciamento de Vagas</li>
+        </ol>
+      </div>
+    </div>
+  </section><!-- End Breadcrumbs -->
+
+  <section class="inner-page why-us">
+    <div class="container">
+      <div class="row no-gutters">
+        <% vagas.forEach(vaga => { %>
+          <div class="col-lg-4 col-md-6 content-item">
+            <h4><%- vaga.titulo %></h4>
+            <a class="px-md-4" href="/admin/vagas/delete/<%- vaga.id %>">Excluir</a>
+            <a class="px-md-4" href="/admin/vagas/editar/<%- vaga.id %>">Editar</a>
+          </div>
+       <% }) %>
+      </div>
+    </div>
+  </section>
+</main><!-- End #main -->
+
+<%- include('../footer.ejs') %> 
